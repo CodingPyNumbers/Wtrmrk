@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/static/css/style.css" />
+		<title>WaterMark - WebApp</title>
+	</head>
+	<body>
+		<header>
+			<div class="nav-links">
+				<img src="/static/img/logo.svg" alt="logo" />
+				<h1 class="nav-links">&nbsp Wtrmrk</h1>
+			</div>
+			<nav>
+				<ul class="nav-links">
+					<li><a class="nav-link" >Upload</a></li>
+					<li></u><a class="nav-link" >Bewerk</a></li>
+					<li><u><a class="nav-link" >&nbspVerwerk&nbsp</a></u></li>
+					<li><a class="nav-link" >Einde</a></li>
+				</ul>
+			</nav>
+			</div>
+		</header>
+		<main>
+			<section class="presentation">
+				<div class="introduction">
+					<div class="intro-text">
+						<h1>Je foto met watermerk is klaar! Klik op de afbeelding om deze te downloaden</h1>
+					</div>
+					<div>
+						<div class="row"></div>
+
+                        <form action="{{ url_for('processed_photo') }}" method="post">
+							<label>Lettergrootte: <input type="text" name="int_answer" value="30"/></label>
+							<label>Tekst: <input type="text" name="water_text" value="ShutterBalance"/></label><br><br>
+							<input type="submit" class="cta-select" value="Start watermarkering">
+                        </form> <br>
+
+                        <form action="/download_and_remove/">
+                            <input type="submit" value="Afronden" class="cta-select">
+                    </form>
+					</div>
+				</div>
+				<div class="cover">
+                    <a download="custom-filename.jpg" href=" {{url_for('static', filename=watermark_name)}}" title="Download" class="cover">
+                    <img alt="Download" src=" {{url_for('static', filename=watermark_name)}}"></a>
+				</div>
+
+			</section>
+			<img class="big-circle" src="/static/img/big-eclipse.svg" alt="" />
+			<img class="medium-circle" src="/static/img/mid-eclipse.svg" alt="" />
+			<img class="small-circle" src="/static/img/small-eclipse.svg" alt="" />
+		</main>
+	</body>
+</html>

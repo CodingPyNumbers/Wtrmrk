@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/static/css/style.css" />
+		<title>WaterMark - WebApp</title>
+	</head>
+	<body>
+		<header>
+			<div class="nav-links">
+				<img src="/static/img/logo.svg" alt="logo" />
+				<h1 class="nav-links">&nbsp Wtrmrk</h1>
+			</div>
+			<nav>
+				<ul class="nav-links">
+					<li><u><a class="nav-link" >&nbspUpload&nbsp</a></u></li>
+					<li><a class="nav-link" >Bewerk</a></li>
+					<li><a class="nav-link" >Verwerk</a></li>
+					<li><a class="nav-link" >Einde</a></li>
+				</ul>
+			</nav>
+			</div>
+		</header>
+		<main>
+			<section class="presentation">
+				<div class="introduction">
+					<div class="intro-text">
+						<h1>Upload een foto om te voorzien van een watermerk</h1>
+					</div>
+					<div>
+						<div class="row"></div>
+                            <form method=post enctype=multipart/form-data>
+                            <input type=file name=file class="custom-file-input"><br></br>
+                            <input type=submit class="cta-select" value=Upload>
+						  </form>
+					</div>
+				</div>
+				<div class="cover">
+					<img src="/static/img/custom-filename.jpg" alt="matebook" />
+				</div>
+			</section>
+			<img class="big-circle" src="/static/img/big-eclipse.svg" alt="" />
+			<img class="medium-circle" src="/static/img/mid-eclipse.svg" alt="" />
+			<img class="small-circle" src="/static/img/small-eclipse.svg" alt="" />
+		</main>
+	</body>
+</html>
